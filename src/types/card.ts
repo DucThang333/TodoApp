@@ -1,22 +1,11 @@
-export enum StatusEnum {
-  PENDING = 1,
-  IN_PROGRESS = 2,
-  COMPLETED = 3,
-  CANCELLED = 4,
-}
-
-export enum PriorityEnum {
-  LOW = 1, // Ưu tiên thấp
-  MEDIUM = 2, // Ưu tiên trung bình
-  HIGH = 3, // Ưu tiên cao
-  URGENT = 4, // Ưu tiên khẩn cấp
-}
+import type { PriorityEnum, StateEnum } from "@/application/domain/models/Task";
 
 export type CardType = {
   title: string;
   startedAt: Date;
+  endedAt:Date;
   deadline?: Date;
-  status: StatusEnum;
+  state: StateEnum;
   priority: PriorityEnum;
   description: string;
 };
